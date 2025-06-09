@@ -23,7 +23,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center animate-sparkle">
+            <div className="w-10 h-10 bg-card rounded-full flex items-center justify-center">
               <span className="text-xl font-bold text-primary">🍯</span>
             </div>
             <div className="text-white">
@@ -38,8 +38,8 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-white hover:text-secondary transition-colors duration-200 font-medium ${
-                  location.pathname === item.path ? 'text-secondary' : ''
+                className={`text-white hover:text-card transition-colors duration-200 font-medium ${
+                  location.pathname === item.path ? 'text-card' : ''
                 }`}
               >
                 {item.name}
@@ -55,7 +55,7 @@ const Navigation = () => {
             </div>
             <Button 
               variant="secondary" 
-              className="bg-secondary text-primary hover:bg-yellow-300 font-semibold"
+              className="bg-card text-primary hover:bg-secondary font-semibold"
             >
               Order Now
             </Button>
@@ -65,7 +65,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-secondary"
+              className="text-white hover:text-card"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -74,14 +74,14 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white rounded-lg mt-2 shadow-lg">
+          <div className="md:hidden bg-card rounded-lg mt-2 shadow-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`block px-3 py-2 text-foreground hover:bg-secondary/20 rounded-md font-medium ${
-                    location.pathname === item.path ? 'bg-secondary/30' : ''
+                  className={`block px-3 py-2 text-foreground hover:bg-muted rounded-md font-medium ${
+                    location.pathname === item.path ? 'bg-muted' : ''
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >

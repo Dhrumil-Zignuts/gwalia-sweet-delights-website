@@ -15,7 +15,7 @@ const FeaturedProducts = () => {
       unit: "per kg",
       rating: 4.9,
       image: "🧈",
-      bgColor: "from-yellow-400 to-orange-500",
+      bgColor: "from-primary to-accent",
       description: "Pure cashew diamonds with silver foil",
       badge: "Bestseller"
     },
@@ -27,7 +27,7 @@ const FeaturedProducts = () => {
       unit: "per kg",
       rating: 4.8,
       image: "🍯",
-      bgColor: "from-amber-400 to-orange-600",
+      bgColor: "from-accent to-primary",
       description: "Rich gram flour sweet with ghee",
       badge: "Traditional"
     },
@@ -39,7 +39,7 @@ const FeaturedProducts = () => {
       unit: "per kg", 
       rating: 4.7,
       image: "🥛",
-      bgColor: "from-pink-300 to-rose-400",
+      bgColor: "from-muted to-primary",
       description: "Soft cottage cheese in flavored milk",
       badge: "Fresh Daily"
     },
@@ -51,7 +51,7 @@ const FeaturedProducts = () => {
       unit: "per kg",
       rating: 4.6,
       image: "🟡",
-      bgColor: "from-lime-400 to-green-500",
+      bgColor: "from-primary to-muted",
       description: "Steamed gram flour cake",
       badge: "Healthy"
     },
@@ -63,7 +63,7 @@ const FeaturedProducts = () => {
       unit: "per kg",
       rating: 4.8,
       image: "🥟",
-      bgColor: "from-purple-400 to-pink-500",
+      bgColor: "from-accent to-primary",
       description: "Crispy dumplings with sweet filling",
       badge: "Festival"
     },
@@ -75,7 +75,7 @@ const FeaturedProducts = () => {
       unit: "per kg",
       rating: 4.5,
       image: "🧅",
-      bgColor: "from-orange-400 to-red-500",
+      bgColor: "from-primary to-accent",
       description: "Crispy wheat flatbread",
       badge: "Crunchy"
     }
@@ -83,18 +83,18 @@ const FeaturedProducts = () => {
 
   const getBadgeColor = (badge: string) => {
     switch (badge) {
-      case 'Bestseller': return 'bg-green-500';
-      case 'Traditional': return 'bg-orange-500';
-      case 'Fresh Daily': return 'bg-blue-500';
-      case 'Healthy': return 'bg-emerald-500';
-      case 'Festival': return 'bg-purple-500';
-      case 'Crunchy': return 'bg-yellow-500';
-      default: return 'bg-gray-500';
+      case 'Bestseller': return 'bg-primary';
+      case 'Traditional': return 'bg-accent';
+      case 'Fresh Daily': return 'bg-primary';
+      case 'Healthy': return 'bg-accent';
+      case 'Festival': return 'bg-primary';
+      case 'Crunchy': return 'bg-accent';
+      default: return 'bg-primary';
     }
   };
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16 bg-background pattern-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -112,7 +112,7 @@ const FeaturedProducts = () => {
           {products.map((product, index) => (
             <Card 
               key={product.id} 
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden"
+              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden bg-card"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-0">
@@ -140,7 +140,7 @@ const FeaturedProducts = () => {
                   {/* Rating */}
                   <div className="flex items-center space-x-2 mb-4">
                     <div className="flex items-center">
-                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <Star className="w-4 h-4 fill-accent text-accent" />
                       <span className="ml-1 text-sm font-medium text-foreground">{product.rating}</span>
                     </div>
                     <span className="text-sm text-muted-foreground">(250+ reviews)</span>

@@ -57,9 +57,6 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				'festival-red': 'hsl(var(--festival-red))',
-				'festival-green': 'hsl(var(--festival-green))',
-				'royal-purple': 'hsl(var(--royal-purple))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -85,18 +82,18 @@ export default {
 				},
 				float: {
 					'0%, 100%': { transform: 'translateY(0px)' },
-					'50%': { transform: 'translateY(-10px)' }
+					'50%': { transform: 'translateY(-8px)' }
 				},
-				sparkle: {
-					'0%, 100%': { opacity: '1', transform: 'scale(1)' },
-					'50%': { opacity: '0.7', transform: 'scale(1.1)' }
+				fadeIn: {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'float': 'float 3s ease-in-out infinite',
-				'sparkle': 'sparkle 2s ease-in-out infinite',
+				'float': 'float 4s ease-in-out infinite',
+				'fade-in': 'fadeIn 0.6s ease-out',
 			}
 		}
 	},

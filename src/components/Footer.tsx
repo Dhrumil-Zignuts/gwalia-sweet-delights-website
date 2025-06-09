@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-card rounded-full flex items-center justify-center">
                 <span className="text-xl font-bold text-primary">🍯</span>
               </div>
               <div>
@@ -29,16 +29,16 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold font-serif">Quick Links</h4>
             <div className="space-y-2">
-              <Link to="/about" className="block text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors">
+              <Link to="/about" className="block text-sm opacity-90 hover:opacity-100 hover:text-card transition-colors">
                 About Us
               </Link>
-              <Link to="/menu" className="block text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors">
+              <Link to="/menu" className="block text-sm opacity-90 hover:opacity-100 hover:text-card transition-colors">
                 Our Menu
               </Link>
-              <Link to="/locations" className="block text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors">
+              <Link to="/locations" className="block text-sm opacity-90 hover:opacity-100 hover:text-card transition-colors">
                 Store Locations
               </Link>
-              <Link to="/gallery" className="block text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors">
+              <Link to="/gallery" className="block text-sm opacity-90 hover:opacity-100 hover:text-card transition-colors">
                 Gallery
               </Link>
             </div>

@@ -3,46 +3,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Google Fonts for Indian aesthetic */
+/* Import Google Fonts for elegant typography */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
-/* Definition of the design system with vibrant Indian colors */
+/* 3-color design system: Deep Brown, Cream, and Burgundy */
 
 @layer base {
   :root {
-    --background: 254 252 247; /* Warm cream background */
-    --foreground: 139 69 19; /* Rich brown text */
+    --background: 250 248 245; /* Light cream background */
+    --foreground: 92 51 23; /* Deep brown text */
 
-    --card: 255 255 255;
-    --card-foreground: 139 69 19;
+    --card: 255 255 255; /* Pure white cards */
+    --card-foreground: 92 51 23;
 
     --popover: 255 255 255;
-    --popover-foreground: 139 69 19;
+    --popover-foreground: 92 51 23;
 
-    --primary: 234 88 12; /* Vibrant orange */
+    --primary: 139 69 19; /* Rich brown */
     --primary-foreground: 255 255 255;
 
-    --secondary: 251 191 36; /* Golden yellow */
-    --secondary-foreground: 139 69 19;
+    --secondary: 250 248 245; /* Light cream */
+    --secondary-foreground: 92 51 23;
 
-    --muted: 254 252 247;
-    --muted-foreground: 168 85 247;
+    --muted: 245 242 238;
+    --muted-foreground: 120 113 108;
 
-    --accent: 220 38 127; /* Deep magenta */
+    --accent: 159 18 57; /* Deep burgundy */
     --accent-foreground: 255 255 255;
 
-    --destructive: 239 68 68;
+    --destructive: 220 38 38;
     --destructive-foreground: 255 255 255;
 
-    --border: 234 179 8;
-    --input: 249 115 22;
-    --ring: 234 88 12;
+    --border: 231 229 228;
+    --input: 231 229 228;
+    --ring: 139 69 19;
 
-    --radius: 0.75rem;
-
-    --festival-red: 220 38 38;
-    --festival-green: 34 197 94;
-    --royal-purple: 147 51 234;
+    --radius: 0.5rem;
   }
 }
 
@@ -61,51 +57,29 @@
   }
 }
 
-/* Custom animations for festive feel */
+/* Simple animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-8px); }
 }
 
-@keyframes sparkle {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.1); }
-}
-
-@keyframes slideInFromLeft {
-  0% { transform: translateX(-100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
 }
 
-.animate-sparkle {
-  animation: sparkle 2s ease-in-out infinite;
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
 }
 
-.animate-slide-in-left {
-  animation: slideInFromLeft 1s ease-out;
-}
-
-/* Traditional pattern background */
+/* Subtle pattern background */
 .pattern-bg {
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(234, 88, 12, 0.1) 2%, transparent 2%),
-    radial-gradient(circle at 75% 75%, rgba(251, 191, 36, 0.1) 2%, transparent 2%);
-  background-size: 40px 40px;
-}
-
-/* Rangoli-inspired decorative elements */
-.rangoli-decoration::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 20px;
-  background: conic-gradient(from 0deg, #ea580c, #facc15, #dc2626, #ea580c);
-  border-radius: 50%;
+    radial-gradient(circle at 25% 25%, rgba(139, 69, 19, 0.03) 2%, transparent 2%),
+    radial-gradient(circle at 75% 75%, rgba(159, 18, 57, 0.03) 2%, transparent 2%);
+  background-size: 60px 60px;
 }
