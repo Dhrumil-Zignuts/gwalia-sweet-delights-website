@@ -16,22 +16,22 @@ const About = () => {
 
   const values = [
     {
-      icon: <Heart className="w-8 h-8 text-red-500" />,
+      icon: <Heart className="w-8 h-8 text-accent" />,
       title: 'Quality First',
       description: 'Using only the finest ingredients sourced from trusted suppliers across India.'
     },
     {
-      icon: <Users className="w-8 h-8 text-blue-500" />,
+      icon: <Users className="w-8 h-8 text-primary" />,
       title: 'Family Tradition',
       description: 'Recipes passed down through generations, preserving authentic flavors.'
     },
     {
-      icon: <Award className="w-8 h-8 text-yellow-500" />,
+      icon: <Award className="w-8 h-8 text-white bg-primary rounded-full p-1" />,
       title: 'Excellence',
       description: 'Committed to maintaining the highest standards in taste and hygiene.'
     },
     {
-      icon: <Clock className="w-8 h-8 text-green-500" />,
+      icon: <Clock className="w-8 h-8 text-accent" />,
       title: 'Fresh Daily',
       description: 'All our sweets and snacks are prepared fresh every day.'
     }
